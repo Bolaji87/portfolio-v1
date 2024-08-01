@@ -3,7 +3,23 @@ import React from "react";
 function Landing() {
   return (
     <div>
-      <h1>portfolio</h1>
+      <NavBar />
+    </div>
+  );
+}
+function NavBar() {
+  return (
+    <div>
+      <div>bolaji</div>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Portfolio</li>
+          <li>Resume</li>
+        </ul>
+      </nav>
+      <div>toggle</div>
     </div>
   );
 }
