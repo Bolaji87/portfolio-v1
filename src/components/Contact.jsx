@@ -1,0 +1,53 @@
+import React from "react";
+
+function Contact() {
+  return (
+    <section
+      id="contact"
+      className="py-12 px-4 min-h-screen bg-gray-100 text-gray-800"
+    >
+      <div className="max-w-2xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
+        <p className="mb-8 text-gray-600">
+          Have a project or question? Send me a message and let's chat!
+        </p>
+
+        <form
+          action="https://formspree.io/f/yourFormID" // Replace with your Formspree or EmailJS endpoint
+          method="POST"
+          className="space-y-4 text-left"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded"
+          />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded"
+          ></textarea>
+          <button
+            type="submit"
+            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+  );
+}
+
+export default Contact;
