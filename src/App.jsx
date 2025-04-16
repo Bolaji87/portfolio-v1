@@ -1,9 +1,30 @@
-import Landing from "./components/Landing.jsx";
+import React from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-export default function App() {
+function App() {
   return (
     <div>
-      <Landing />
+      <Navbar />
+      <section id="home">
+        <Home />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
+      <Footer />
     </div>
   );
 }
+
+export default App;
