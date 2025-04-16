@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../ui/Button";
 
 function Navbar() {
   return (
@@ -30,10 +31,10 @@ function Navbar() {
           Contact
         </a>
       </nav>
-      <div className="bg-blue-600 py-2 px-5 rounded-full ">
-        <a href="#contact" className="text-xl text-gray-200 font-semibold">
+      <div className="">
+        <Button href="#contact" type="primary">
           Hire me
-        </a>
+        </Button>
       </div>
     </div>
   );
