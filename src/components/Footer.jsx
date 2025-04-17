@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="py-4 bg-gray-100 text-center text-sm font-semibold">
+    <footer className="py-4 bg-gray-100 text-gray-800 text-center text-sm font-semibold">
       &copy; {new Date().getFullYear()} Saka Bolaji Waheed. All rights reserved
     </footer>
   );
