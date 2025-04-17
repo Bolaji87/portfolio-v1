@@ -2,11 +2,12 @@ import React from "react";
 
 function Button({ children, type, href }) {
   const base =
-    "border-none  text-gray-200 font-semibold bg-blue-600 rounded-full";
+    "border-none  text-gray-200 font-semibold transition bg-emerald-600 hover:bg-emerald-400  bg-gradient-to-l from-emerald-600 to-blue-600 text-white p-8 ";
 
   const style = {
-    primary: base + " py-2 px-5 text-xl",
-    secondary: base + " py-3 px-6 tracking-wide ",
+    primary: base + " py-2 px-5 text-xl rounded-full",
+    secondary: base + " py-2 px-6 tracking-wide rounded-full ",
+    submit: base + " py-2 px-6 tracking-wide rounded",
   };
 
   if (href === "#contact")
