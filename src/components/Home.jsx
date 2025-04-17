@@ -7,7 +7,7 @@ function Home() {
   return (
     <div className="flex py-20 w-full px-8  justify-between  items-center">
       <div>
-        <h1 className="font-semibold mb-5 text-6xl tracking-wide">
+        <h1 className="font-semibold mb-5 text-6xl text-gray-800 tracking-wide">
           <span className="">Hi, I'm Bolaji</span> <br />
           <span className="">a React.js Developer</span>
         </h1>
@@ -20,13 +20,13 @@ function Home() {
           </Button>
         </div>
         <div className="flex mt-5 items-center font-semibold gap-4">
-          <div className="bg-gray-100 p-3 rounded-full">
+          <div className=" p-3 rounded-full bg-blue-200">
             <Github className="bg-slate-50 rounded-full text-blue-600 font-semibold text-xl" />
           </div>
-          <div className="bg-gray-100  p-3 rounded-full">
+          <div className=" bg-blue-200  p-3 rounded-full">
             <Twitter className="bg-slate-50 rounded-full text-blue-600 font-semibold text-xl" />
           </div>
-          <div className="bg-gray-100 p-3 rounded-full">
+          <div className=" bg-blue-200 p-3 rounded-full">
             <Linkedin className="bg-slate-50 rounded-full text-blue-600 font-semibold text-xl" />
           </div>
         </div>
