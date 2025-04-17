@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../ui/Button";
 
 function Contact() {
   return (
@@ -38,12 +39,8 @@ function Contact() {
             required
             className="w-full px-4 py-2 border border-gray-300 rounded"
           ></textarea>
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
-          >
-            Send Message
-          </button>
+
+          <Button type="submit">Send Message</Button>
         </form>
       </div>
     </section>
