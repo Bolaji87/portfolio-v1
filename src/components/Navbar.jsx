@@ -1,40 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
+import { Menu } from "lucide-react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaTimes } from "react-icons/fa";
+
+import Modal from "./Modal.jsx";
 import Button from "../ui/Button";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  function handleToggle() {
+    setIsOpen((isOpen) => !isOpen);
+  }
   return (
-    <div className="flex bg-gray-100 text-gray-800 py-5 px-8 items-center justify-between">
-      <h1 className="text-2xl font-semibold italic text-emerald-600">Bolaji</h1>
-      <nav className="flex gap-4 text-lg ">
+    <div className="flex relative bg-inherit text-gray-200 py-5 px-8 sm:px-12 md:px-14 lg:px-24 items-center justify-between border-b">
+      <h1 className="text-3xl   font-bold  hover:text-white md:hover:text-4xl cursor-pointer hover:font-semibold md:hover:font-bold hover:transition-all  ">
+        SB
+      </h1>
+      <nav className="md:flex gap-4 text-lg hidden ">
         <a
           href="#home"
-          className="text-lg font-semibold inline-block py-2 px-4 text-gray-800 hover:text-emerald-600"
+          className="text-lg font-semibold inline-block py-2 px-4 hover:text-white hover:text-2xl hover:font-bold hover:transition-all"
         >
           Home
         </a>
         <a
-          href="#projects"
-          className="text-lg font-semibold inline-block py-2 px-4 text-gray-800  hover:text-emerald-600"
-        >
-          Projects
-        </a>
-        <a
           href="#about"
-          className="text-lg font-semibold inline-block py-2 px-4 text-gray-800  hover:text-emerald-600"
+          className="text-lg font-semibold inline-block py-2 px-4 hover:text-white hover:text-2xl hover:font-bold hover:transition-all "
         >
           About
         </a>
         <a
+          href="#projects"
+          className="text-lg font-semibold inline-block py-2 px-4 hover:text-white hover:text-2xl hover:font-bold hover:transition-all "
+        >
+          Projects
+        </a>
+
+        <a
+          href="#skills"
+          className="text-lg font-semibold inline-block py-2 px-4 hover:text-white hover:text-2xl hover:font-bold hover:transition-all "
+        >
+          Skills
+        </a>
+        <a
           href="#contact"
-          className="text-lg font-semibold inline-block py-2 px-4 text-gray-800 hover:text-emerald-600"
+          className="text-lg font-semibold inline-block py-2 px-4 hover:text-white hover:text-2xl hover:font-bold hover:transition-all "
         >
           Contact
         </a>
       </nav>
-      <div className="">
-        <Button href="#contact" type="primary">
+      <div className="flex items-center gap-2 h-10">
+        {/* <Button href="#contact" type="primary">
           Hire me
-        </Button>
+        </Button> */}
+        <button className="py-2 sm:py-4  px-6 hidden sm:inline-flex items-center  text-2xl h-full font-bold rounded bg-gray-100 border-none transition text-gray-500">
+          Hire me
+        </button>
+
+        <div
+          role="button"
+          onClick={handleToggle}
+          className="h-full md:hidden py-2  text-2xl font-semibold text-gray-100 w-auto flex items-center"
+        >
+          {isOpen ? (
+            <FaTimes className="h-[calc(theme(fontSize.lg)*2)] w-[calc(theme(fontSize.lg)*1.5)] cursor-pointer" />
+          ) : (
+            <GiHamburgerMenu className="h-[calc(theme(fontSize.2xl)*2.5)] w-[calc(theme(fontSize.2xl)*2)] cursor-pointer" />
+          )}
+        </div>
+        {isOpen && <Modal />}
       </div>
     </div>
   );

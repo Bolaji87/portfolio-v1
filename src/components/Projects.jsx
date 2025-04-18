@@ -102,7 +102,10 @@ function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="projects" className="py-12 px-4 bg-white text-gray-800">
+    <section
+      id="projects"
+      className="py-12  bg-white text-gray-800 px-8 sm:px-12 md:px-14 lg:px-24 "
+    >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-10">My Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
