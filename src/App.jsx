@@ -5,10 +5,12 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div>
+    <div className="w-screen overflow-x-hidden bg-gray-500">
       <Navbar />
       <section id="home">
         <Home />
@@ -19,10 +21,14 @@ function App() {
       <section id="about">
         <About />
       </section>
+      <section id="skills">
+        <Skills />
+      </section>
       <section id="contact">
         <Contact />
       </section>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
