@@ -20,7 +20,7 @@ function Navbar() {
         <nav className="md:flex gap-4 text-lg hidden ">
           <a
             href="#home"
-            className="text-lg font-semibold inline-block py-2 px-4 hover:text-white hover:text-2xl hover:font-bold hover:transition-all"
+            className="text-lg font-semibold inline-block py-2 px-4 hover:text-white hover:text-2xl hover:font-bold hover:scale-105 duration-500 hover:transition-all"
           >
             Home
           </a>
