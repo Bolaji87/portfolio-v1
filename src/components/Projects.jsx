@@ -1,70 +1,3 @@
-// import React from "react";
-
-// const projects = [
-//   {
-//     id: 1,
-//     title: "E-Commerce App",
-//     image: "/images/ecommerce.png",
-//     description:
-//       "A full-featured e-commerce web application with cart, authentication, and payment integration.",
-//   },
-//   {
-//     id: 2,
-//     title: "Portfolio Website",
-//     image: "/images/portfolio.png",
-//     description:
-//       "A modern and responsive portfolio to showcase developer skills, experience, and projects.",
-//   },
-//   {
-//     id: 3,
-//     title: "Task Manager",
-//     image: "/images/task-manager.png",
-//     description:
-//       "A productivity tool for managing tasks and goals with drag-and-drop support.",
-//   },
-//   {
-//     id: 4,
-//     title: "Weather App",
-//     image: "/images/weather-app.png",
-//     description:
-//       "A clean weather app using a public API to display forecast data and user location.",
-//   },
-// ];
-
-// function Projects() {
-//   return (
-//     <section
-//       id="projects"
-//       className="py-16 px-6 min-h-screen bg-gray-100 text-gray-800"
-//     >
-//       <div className="max-w-6xl mx-auto">
-//         <h2 className="text-4xl font-bold text-center mb-12">My Projects</h2>
-
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-//           {projects.map((project) => (
-//             <div
-//               key={project.id}
-//               className="bg-white rounded-2xl shadow-md overflow-hidden transition-transform transform hover:scale-105"
-//             >
-//               <img
-//                 src={project.image}
-//                 alt={project.title}
-//                 className="w-full h-64 object-cover"
-//               />
-//               <div className="p-6">
-//                 <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-//                 <p className="text-gray-600">{project.description}</p>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default Projects;
-
 import React, { useState } from "react";
 
 const projects = [
@@ -104,16 +37,19 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="py-12  bg-white text-gray-800 px-8 sm:px-12 md:px-14 lg:px-24 "
+      className="py-12 pt-[4.5rem] min-h-screen bg-gray-500 text-gray-800 px-8 sm:px-12 md:px-14 lg:px-24 "
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-10">My Projects</h2>
+        <p className="text-center mt-1.5 mb-5 text-xl text-gray-100 font-bold">
+          Check out some of my recent works
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className="bg-gray-100 rounded-xl shadow-md overflow-hidden cursor-pointer transform hover:scale-105 hover:shadow-xl transition duration-300"
+              className="bg-gray-100 rounded-xl shadow-md mt-4 overflow-hidden cursor-pointer transform hover:scale-105 hover:shadow-xl transition duration-300"
             >
               <img
                 src={project.image}
